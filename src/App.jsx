@@ -298,11 +298,11 @@ function Contact() {
             {/* Simple contact form that opens the user's email client */}
             <form action={`mailto:${CONFIG.email}`} method="post" encType="text/plain" className="grid gap-4">
               <div className="grid gap-2 sm:grid-cols-2">
-                <input required name="name" placeholder="Your name" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2" />
-                <input required type="email" name="email" placeholder="Your email" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2" />
+                <input required name="name" placeholder="Your name" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2 bg-white text-gray-900" />
+                <input required type="email" name="email" placeholder="Your email" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2 bg-white text-gray-900"/>
               </div>
-              <input name="company" placeholder="Company (optional)" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2" />
-              <textarea required name="message" rows={5} placeholder="How can we help?" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2" />
+              <input name="company" placeholder="Company (optional)" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2 bg-white text-gray-900" />
+              <textarea required name="message" rows={5} placeholder="How can we help?" className="rounded-2xl border px-4 py-3 outline-none focus:ring-2 bg-white text-gray-900" />
               <button className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gray-900 px-5 py-3 font-medium text-white hover:bg-black">
                 Send message <ArrowRight className="h-4 w-4" />
               </button>
@@ -312,7 +312,7 @@ function Contact() {
           <div className="space-y-4 md:col-span-2">
             <InfoCard icon={Phone} label="Call" value={<a href={`tel:${CONFIG.phone}`}>{CONFIG.phone}</a>} />
             <InfoCard icon={Mail} label="Email" value={<a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>} />
-            <InfoCard icon={MapPin} label="Visit" value={CONFIG.address} />
+            <InfoCard icon={MapPin} label="Visit" value={ <a href="https://maps.app.goo.gl/vtyKNYJ4QFVAY8EK7" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4" > {CONFIG.address} </a>}/>
             <InfoCard icon={Clock} label="Hours" value={CONFIG.hours} />
           </div>
         </div>
